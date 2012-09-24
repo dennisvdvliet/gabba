@@ -1,14 +1,17 @@
 PATH
   remote: .
   specs:
-    gabba (0.2.0)
+    gabba (0.3.0)
+      ga_cookie_parser
 
 GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.2.2)
     crack (0.1.8)
+    ga_cookie_parser (0.1.0)
     minitest (2.0.0)
+    rake (0.9.2.2)
     webmock (1.6.1)
       addressable (>= 2.2.2)
       crack (>= 0.1.7)
@@ -19,4 +22,5 @@ PLATFORMS
 DEPENDENCIES
   gabba!
   minitest
+  rake
   webmock

@@ -307,9 +307,13 @@ module Gabba
     #   g.page_view("something", "track/me")
     #
     def identify_user(options={})
-      @utma = options[:utma] unless options[:utma].nil?
-      @utmb = options[:utmb] unless options[:utmb].nil?
-      @utmz = options[:utmz] unless options[:utmz].nil?
+      if options.is_a?(Hash)
+        @utma = options[:utma] unless options[:utma].nil?
+        @utmb = options[:utmb] unless options[:utmb].nil?
+        @utmz = options[:utmz] unless options[:utmz].nil?
+      else
+        @utma = options
+      end
     end
 
     # create magical cookie params used by GA for its own nefarious purposes
